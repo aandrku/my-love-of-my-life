@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router';
 import heartsSvg from '../../assets/hearts.svg';
+import { motion } from 'motion/react';
 
 function LandingPage() {
   return (
@@ -35,11 +37,21 @@ function Content() {
 }
 
 function Footer() {
+  const navigate = useNavigate();
+
+  const clickHandler = () => {
+    navigate('/why');
+  };
+
   return (
     <div className="h absolute bottom-6 flex w-full flex-col items-center justify-center gap-4">
-      <button className="bg-accent-ui1 border-accent-border2 -rotate-6 rounded-2xl border p-4 text-3xl">
+      <motion.div
+        onClick={clickHandler}
+        className="bg-accent-ui1 border-accent-border2 -rotate-6 rounded-2xl border p-4 text-3xl select-none"
+        whileTap={{ rotate: -8, scale: 1.1 }}
+      >
         Take a look
-      </button>
+      </motion.div>
       <p className="text-solid2">^ You should definitely click this button ^</p>
     </div>
   );
