@@ -4,12 +4,17 @@ import { motion } from 'motion/react';
 
 function LandingPage() {
   return (
-    <div className="bg-bg2 text-text1 flex h-screen w-screen flex-col items-center gap-4 pt-4">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-bg2 text-text1 flex h-screen w-screen flex-col items-center gap-4 pt-4"
+    >
       <img src={heartsSvg} />
       <Header></Header>
       <Content></Content>
       <Footer></Footer>
-    </div>
+    </motion.div>
   );
 }
 
