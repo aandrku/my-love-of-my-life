@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
-import LandingPage from '../pages/LandingPage';
-import WhyYouReAwesomePage from '../pages/WhyYouReAwesomePage';
-import { GiftInstructionsPage } from '../pages/GiftInstructionsPage';
-import { Challenge1Page } from '../pages/Challenge1Page';
-import Challenge2Page from '../pages/Challenge2Page';
-import Challenge3Page from '../pages/Challenge3Page';
-import { FinalMessagePage } from '../pages/FinalMessagePage';
+import LandingPage from '@/components/pages/LandingPage';
+import WhyYouReAwesomePage from '@/components/pages/WhyYouReAwesomePage';
+import { GiftInstructionsPage } from '@/components/pages/GiftInstructionsPage';
+import { Challenge1Page } from '@/components/pages/Challenge1Page';
+import Challenge2Page from '@/components/pages/Challenge2Page';
+import Challenge3Page from '@/components/pages/Challenge3Page';
+import { FinalMessagePage } from '@/components/pages/FinalMessagePage';
 
 export function App() {
   return (

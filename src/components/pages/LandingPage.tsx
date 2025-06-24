@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router';
-import heartsSvg from '../../assets/hearts.svg';
+import heartsSvg from '@/assets/hearts.svg';
 import { motion } from 'motion/react';
 
 function LandingPage() {

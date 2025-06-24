@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ReasonsCarousel } from '../carousels/ReasonsCarousel';
+import { ReasonsCarousel } from '@/components/carousels/ReasonsCarousel';
 
 const reasons = ["You're cute", "You're beatiful", "You're kind"];
 

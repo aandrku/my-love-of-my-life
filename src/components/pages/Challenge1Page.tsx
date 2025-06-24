@@ -1,7 +1,7 @@
 import {
   DraggableCardBody,
   DraggableCardContainer,
-} from '../draggable-card/DraggableCard';
+} from '@/components/draggable-card/DraggableCard';
 
 export function Memories() {
   const items = [
