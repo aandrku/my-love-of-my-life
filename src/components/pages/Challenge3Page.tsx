@@ -113,7 +113,7 @@ export default function Challenge3Page() {
 
   return (
     <motion.div
-      key={questions[current].question}
+      key={questions[current].key}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
