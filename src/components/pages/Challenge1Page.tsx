@@ -2,6 +2,8 @@ import {
   DraggableCardBody,
   DraggableCardContainer,
 } from '@/components/draggable-card/DraggableCard';
+import { motion } from 'motion/react';
+import { useNavigate } from 'react-router';
 
 export function Memories() {
   const items = [
@@ -49,18 +51,18 @@ export function Memories() {
     },
   ];
   return (
-    <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
-      <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
-        If its your first day at Fight Club, you have to fight.
+    <DraggableCardContainer className="relative flex min-h-[60vh] w-full items-center justify-center overflow-clip">
+      <p className="text-border1 top-1/2 mx-auto max-w-sm translate-x-20 -translate-y-3/4 text-center text-2xl">
+        6
       </p>
       {items.map((item) => (
         <DraggableCardBody className={item.className}>
           <img
             src={item.image}
             alt={item.title}
-            className="pointer-events-none relative z-10 h-80 w-80 object-cover"
+            className="pointer-events-none relative z-10 object-cover"
           />
-          <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+          <h3 className="text-text2 mt-4 text-center text-2xl font-bold">
             {item.title}
           </h3>
         </DraggableCardBody>
@@ -69,13 +71,34 @@ export function Memories() {
   );
 }
 
-export function Challenge1Page() {
+function Footer() {
+  const navigate = useNavigate();
   return (
     <div>
-      <div>Challenge 1</div>
-      <div>Find the first clue among our memories</div>
-      <div>Press here if you found the clue</div>
-      <Memories></Memories>
+      <motion.div
+        onClick={() => {
+          navigate('/challenge2');
+        }}
+        className="bg-accent-ui1 border-accent-border2 -rotate-6 rounded-2xl border p-4 text-3xl select-none"
+        whileTap={{ rotate: -8, scale: 1.1 }}
+      >
+        Next Challenge
+      </motion.div>
     </div>
+  );
+}
+
+export function Challenge1Page() {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="text-text1 flex flex-col items-center gap-4 text-2xl"
+    >
+      <div className="text-accent-text1 text-3xl">Challenge 1</div>
+      <div>Find the first clue among our memories</div>
+      <Memories></Memories>
+      <Footer></Footer>
+    </motion.div>
   );
 }
