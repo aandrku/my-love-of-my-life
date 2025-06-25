@@ -5,16 +5,19 @@ import { useNavigate } from 'react-router';
 const questions = [
   {
     question: 'Is the sky blue?',
+    img: '/challenge3/san-francisco.jpg',
     answer: 'yes',
     options: ['yes', 'no', 'maybe'],
   },
   {
     question: 'Do cats bark?',
+    img: '/challenge3/san-francisco.jpg',
     answer: 'no',
     options: ['yes', 'no', 'maybe'],
   },
   {
     question: 'Is JavaScript fun?',
+    img: '/challenge3/san-francisco.jpg',
     answer: 'yes',
     options: ['yes', 'no', 'maybe'],
   },
@@ -74,7 +77,7 @@ export default function Challenge3Page() {
 
         <motion.div
           onClick={() => {
-            navigate('/challenge3');
+            navigate('/final-message');
           }}
           className="bg-accent-ui1 text-accent-text1 border-accent-border2 w-2/3 -rotate-6 rounded-2xl border p-4 text-3xl select-none"
           whileTap={{ rotate: -8, scale: 1.1 }}
@@ -94,16 +97,16 @@ export default function Challenge3Page() {
       className="text-text1 flex flex-col gap-6 p-6 text-center"
     >
       <div className="flex flex-col gap-2">
-        <div className="text-accent-text1 text-3xl">Here is a quick quiz.</div>
+        <div className="text-accent-text1 text-3xl">
+          Here your last challenge
+        </div>
         <div className="text-2xl">
-          Answer all the questions correctly to recover the second clue.
+          Guess each moment of our relationships and get the last clue
         </div>
       </div>
-      <div className="bg-bg1 border-border3 rounded-2xl border p-6">
-        <h2 className="mb-4 text-left text-2xl">
-          {questions[current].question}
-        </h2>
-        <div className="flex flex-col items-center justify-center gap-4">
+      <div className="bg-bg1 border-border3 flex w-full flex-col items-center gap-3 rounded-2xl border p-6">
+        <img className="size-48 rounded-2xl" src={questions[current].img} />
+        <div className="flex w-full flex-col items-center justify-center gap-4">
           {questions[current].options.map((option) => {
             return (
               <motion.div

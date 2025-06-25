@@ -5,8 +5,8 @@ import coolHeart from '@/assets/cool-heart.svg';
 export function FinalMessagePage() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: -200 }}
+      animate={{ opacity: 1, y: 0 }}
       className="text-text1 flex flex-col items-center gap-4 p-8 text-center"
     >
       <img src={lotsOfHearts} />
