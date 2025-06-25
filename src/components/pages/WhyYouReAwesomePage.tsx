@@ -2,8 +2,21 @@ import { motion } from 'motion/react';
 import { ReasonsCarousel } from '@/components/carousels/ReasonsCarousel';
 import { useNavigate } from 'react-router';
 
-const reasons = ["You're cute", "You're beatiful", "You're kind"];
-const reasons2 = ["You're cute", "You're beatiful", "You're kind"];
+const reasons = [
+  "You're cute",
+  "You're beatiful",
+  "You're kind",
+  'You like my mom',
+  'You care about me',
+];
+const reasons2 = [
+  "You're funny",
+  "You're my bubka",
+  'You have betiful voice',
+  "You're funny when you talk in your dreams",
+  'You are smart',
+  'You are my bro',
+];
 
 function WhyYouReAwesomePage() {
   return (
