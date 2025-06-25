@@ -94,7 +94,7 @@ export default function Challenge3Page() {
         <div className="text-text1 bg-bg1 border-border3 rounded-2xl border p-6 text-center text-4xl">
           <h1 className="font-bold">You did it!</h1>
           <h2>
-            The third clue is <span className="text-accent-text2">5</span>
+            The last clue is <span className="text-accent-text2">5</span>
           </h2>
         </div>
 
@@ -121,7 +121,7 @@ export default function Challenge3Page() {
     >
       <div className="flex flex-col gap-2">
         <div className="text-accent-text1 text-3xl">
-          Here your last challenge
+          Here is your last challenge
         </div>
         <div className="text-2xl">
           Guess each moment of our relationships and get the last clue

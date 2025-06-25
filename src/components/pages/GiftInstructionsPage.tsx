@@ -5,7 +5,7 @@ import luvU from '@/assets/luv-u.svg';
 import face from '@/assets/face.svg';
 import { useNavigate } from 'react-router';
 
-const place = "in your mom's room ";
+const place = 'in the living room';
 
 export function GiftInstructionsPage() {
   const [giftFound, setGiftFound] = useState(false);
