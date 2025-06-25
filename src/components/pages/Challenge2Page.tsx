@@ -4,19 +4,39 @@ import { useNavigate } from 'react-router';
 
 const questions = [
   {
-    question: 'Is the sky blue?',
-    answer: 'yes',
-    options: ['yes', 'no', 'maybe'],
+    question: 'What did you call me when I offered you to date?',
+    answer: 'durak',
+    options: ['idiot', 'durak', 'debil'],
   },
   {
-    question: 'Do cats bark?',
-    answer: 'no',
-    options: ['yes', 'no', 'maybe'],
+    question: 'Where are we going next weekend?',
+    answer: 'monterey',
+    options: ['monterey', 'san francisco', 'new york'],
   },
   {
-    question: 'Is JavaScript fun?',
-    answer: 'yes',
-    options: ['yes', 'no', 'maybe'],
+    question: 'Do you love me (Andrii)?',
+    answer: 'yep',
+    options: ['yep', 'no', 'maybe'],
+  },
+  {
+    question: 'What is my favorite OS?',
+    answer: 'Linux',
+    options: ['Linux', 'MacOS', 'Windows'],
+  },
+  {
+    question: 'What is my favorite way to call you?',
+    answer: 'bubka',
+    options: ['bubka', 'babe', 'kisa'],
+  },
+  {
+    question: 'My (Andrii) favorite anime?',
+    answer: 'naruto',
+    options: ['one punch man', 'one piece', 'naruto'],
+  },
+  {
+    question: "Let's go on a date today.",
+    answer: 'Okay',
+    options: ['Okay'],
   },
 ];
 

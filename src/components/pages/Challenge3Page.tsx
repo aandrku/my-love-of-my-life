@@ -2,24 +2,44 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router';
 
+const picSrc = '/challenge3/';
+
 const questions = [
   {
-    question: 'Is the sky blue?',
-    img: '/challenge3/san-francisco.jpg',
-    answer: 'yes',
-    options: ['yes', 'no', 'maybe'],
+    key: 1,
+    img: picSrc + 'sf.jpg',
+    answer: 'SF',
+    options: ['SF', 'Tahoe', 'Just hanging out'],
   },
   {
-    question: 'Do cats bark?',
-    img: '/challenge3/san-francisco.jpg',
-    answer: 'no',
-    options: ['yes', 'no', 'maybe'],
+    key: 2,
+    img: picSrc + 'driving-tahoe.jpg',
+    answer: 'On our way to Tahoe',
+    options: [
+      'On our way to SF',
+      'On our way to Tahoe',
+      'On our way to the river',
+    ],
   },
   {
-    question: 'Is JavaScript fun?',
-    img: '/challenge3/san-francisco.jpg',
-    answer: 'yes',
-    options: ['yes', 'no', 'maybe'],
+    key: 3,
+    img: picSrc + 'halloween.jpg',
+    answer: 'Halloween with Misha',
+    options: [
+      'Halloween with Misha',
+      'Walking by the Galleria',
+      'Tahoe Market',
+    ],
+  },
+  {
+    key: 4,
+    img: picSrc + 'games.jpg',
+    answer: 'Gaming machines Tahoe Trip',
+    options: [
+      'Gaming machines Tahoe Trip',
+      'Gaming machines Galleria',
+      'Gaming machines somewhere else',
+    ],
   },
 ];
 
@@ -67,7 +87,10 @@ export default function Challenge3Page() {
 
   if (quizComplete) {
     return (
-      <motion.div className="flex h-screen flex-col items-center gap-20 p-4 pt-20">
+      <motion.div
+        key={questions[current].key}
+        className="flex h-screen flex-col items-center gap-20 p-4 pt-20"
+      >
         <div className="text-text1 bg-bg1 border-border3 rounded-2xl border p-6 text-center text-4xl">
           <h1 className="font-bold">You did it!</h1>
           <h2>
